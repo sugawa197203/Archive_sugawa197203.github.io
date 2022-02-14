@@ -1,1 +1,1 @@
-# sugawa197203.github.io
+# SUGAWA Lab
