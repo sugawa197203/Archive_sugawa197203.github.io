@@ -38,7 +38,8 @@ byte数が大きくなると略したりします。
 |ペタ peta|P|1Pbyte|
 |テラ tera|T|1Tbyte|
 |ギガ giga|G|1Gbyte|
-|キロ mega|K|1Kbyte|
+|メガ mega|M|1Mbyte|
+|キロ kiro|K|1Kbyte|
 
 ### メモリは並んだbyte
 
