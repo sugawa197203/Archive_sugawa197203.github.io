@@ -225,7 +225,7 @@ int main(void)
 	printf("a Address is %p\n", ap);
 	printf("a = %d\n", a);
 
-	*ap = 114514;
+	*ap = 255;
 
 	printf("a = %d\n", a);
 }
@@ -245,7 +245,7 @@ int main(void)
 	printf("a = %d\n", a);
 	printf("a = %d\n", *ap);
 
-	ap = 114514;
+	ap = 255;
 
 	printf("a = %d\n", a);
 	printf("a = %d\n", *ap);
