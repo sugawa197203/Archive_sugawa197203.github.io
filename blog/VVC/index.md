@@ -4,6 +4,8 @@ VVCを試しに使ってみたときのメモです。コンフィグとかい�
 
 ## VVCとは
 
+AVCやHEVCよりもさらに高効率な符号化を可能とする映像圧縮符号化方式で、MPEGの合同組織として2015年10月に設立されたJVETにおいて進められたそうです。
+
 2020年7月にできた映像コーデック
 
 なんかHEVCと比較し30%～40%ほどの容量削減が可能らしい
@@ -62,7 +64,7 @@ make
 
 私の環境では数分でビルドが終わりました。
 
-## 圧縮してみる
+## エンコードしてみる
 
 ### 素材
 
@@ -108,9 +110,9 @@ Windowsキーを押して「yuvtoolkit」と入力し、Enterを押せばYuvTool
 
 先程生成したblue_sky_720x480.yuvをドラッグ&ドロップでYuvToolkitに投げると再生されます。サイズはファイル名に「_720x480」とついていると、自動で合わせてくれます。再生が確認できれば問題有りません。
 
-### 圧縮(エンコード)
+### エンコード
 
-EncoderAppStaticで圧縮します。
+EncoderAppStaticでエンコードします。
 
 ```
 ./EncoderAppStatic -i blue_sky_720x480.yuv -c ../cfg/encoder_randomaccess_vtm.cfg -fr 30 -f 32 -wdt 720 -hgt 480 --InputBitDepth=8 --OutputBitDepth=8 --InternalBitDepth=8 -b ./blue_sky.bin
@@ -118,7 +120,7 @@ EncoderAppStaticで圧縮します。
 
 `-i blue_sky_720x480.yuv`は入力ファイル名です。
 
-`-c ../cfg/encoder_randomaccess_vtm.cfg`はコンフィグの指定です。/cfg/encoder_randomaccess_vtm.cfgを参照させています。気が向いたらコンフィグを眺めていきます。
+`-c ../cfg/encoder_randomaccess_vtm.cfg`はコンフィグの指定です。今回は/cfg/encoder_randomaccess_vtm.cfgを参照させています。コマンドラインでもconfigは設定可能です。コマンドラインのほうが優先されます。
 
 `-fr 30`はフレームレートです。30にしていますが、30じゃないかもしれません。間違えてたら再生速度が変わるだけだと思う、、、
 
@@ -135,9 +137,9 @@ EncoderAppStaticで圧縮します。
 `--InternalBitDepth=8`はコーディングに使用されるビット深度です。よくわからん
 
 
-### 解凍(デコード)
+### デコード
 
-DecoderAppStaticで解凍します。
+DecoderAppStaticでデコードします。
 
 ```
 ./DecoderAppStatic -b blue_sky.bin -o blue_sky_dec_720x480.yuv
