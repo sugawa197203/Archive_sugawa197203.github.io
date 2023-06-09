@@ -135,7 +135,7 @@ EncoderAppStaticで圧縮します。
 `--InternalBitDepth=8`はコーディングに使用されるビット深度です。よくわからん
 
 
-## 解凍(デコード)
+### 解凍(デコード)
 
 DecoderAppStaticで解凍します。
 
@@ -143,6 +143,26 @@ DecoderAppStaticで解凍します。
 ./DecoderAppStatic -b blue_sky.bin -o blue_sky_dec_720x480.yuv
 ```
 
-`-b blue_sky.bin`は解凍(デコード)したい圧縮されたバイナリファイルです。
+`-b blue_sky.bin` は解凍(デコード)したい圧縮されたバイナリファイルです。
 
-`-o blue_sky_dec_720x480.yuv`は出力ファイル名です。わかりやすくするため、decをつけました。
+`-o blue_sky_dec_720x480.yuv` は出力ファイル名です。わかりやすくするため、decをつけました。
+
+出力された blue_sky_dec_720x480.yuv を YuvToolkit で再生してください。元の動画と比べて見てください。
+
+青空にバンディングが出たり、レンズの汚れ？が変わったりしてるように見えます。(俺だけ？)
+
+## サイズ比較
+
+以下のコマンドで、ファイルのサイズをbyte単位で確認できます。
+
+```
+ls -l
+```
+
+![サイズ](./5.png "サイズ")
+
+36016 とか 16588800 がファイルサイズです。
+
+`blue_sky_720x480.yuv` → **圧縮** → `blue_sky.bin` → **解凍** → `blue_sky_dec_720x480.yuv`
+
+って感じになってる？ならすげぇ圧縮できてますね
