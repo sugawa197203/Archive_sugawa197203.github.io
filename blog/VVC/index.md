@@ -116,6 +116,8 @@ Windowsキーを押して「yuvtoolkit」と入力し、Enterを押せばYuvTool
 
 EncoderAppStaticでエンコードします。
 
+大体15分ぐらい？
+
 ```
 ./EncoderAppStatic -i blue_sky_720x480.yuv -c ../cfg/encoder_randomaccess_vtm.cfg -fr 30 -f 32 -wdt 720 -hgt 480 --InputBitDepth=8 --OutputBitDepth=8 --InternalBitDepth=8 -b ./blue_sky.bin
 ```
