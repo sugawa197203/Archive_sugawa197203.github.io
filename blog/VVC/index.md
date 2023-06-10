@@ -18,7 +18,7 @@ AVCやHEVCよりもさらに高効率な符号化を可能とする映像圧縮�
 
 ### ダウンロード
 
-[ここ](https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM)にリポジトリがあります。
+VVCSoftware_VTMが[ここ](https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM)にリポジトリがあります。
 
 リンクを開いたら左の方にあるDeployments→Releasesをクリックしてください。
 
