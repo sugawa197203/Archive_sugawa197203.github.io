@@ -126,7 +126,7 @@ EncoderAppStaticでエンコードします。
 
 `-c ../cfg/encoder_randomaccess_vtm.cfg`はコンフィグの指定です。今回は/cfg/encoder_randomaccess_vtm.cfgを参照させています。コマンドラインでもconfigは設定可能です。コマンドラインのほうが優先されます。
 
-`-fr 30`はフレームレートです。30にしていますが、30じゃないかもしれません。間違えてたら再生速度が変わるだけだと思う、、、
+`-fr 30`はフレームレートです。blue_skyは30でした。YUVToolkitで動画読み込んだら Actions → Video Source Options でFPSの欄に書いてあります。 
 
 `-f 32`はフレーム数です。YUVにしたとき、32フレームだけにしました。
 
