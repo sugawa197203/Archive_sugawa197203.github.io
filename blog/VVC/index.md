@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: jekyll-theme-slate
 title: 実験 VVC
 ---
 
